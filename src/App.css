@@ -6,9 +6,11 @@
 }
 
 .page-container {
+  background-image: url("/backgrounds/bg2.png");
+  background-size: cover;
+  background-position: center;
   width: 100vw;
   height: 100vh;
-  background-color: #fff;
   display: flex;
   flex-direction: column;
   justify-content: center;
