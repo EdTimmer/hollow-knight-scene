@@ -27,7 +27,7 @@ const BigIsland = forwardRef<THREE.Group, Props>(
     useImperativeHandle(ref, () => groupRef.current!);
 
     const { animations, scene } = useGLTF(
-      "/models/big_island2.glb"
+      "/models/big_island3.glb"
     );
 
     const { actions } = useAnimations(animations, parentGroupRef);
