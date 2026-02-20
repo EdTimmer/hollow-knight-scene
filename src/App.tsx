@@ -8,13 +8,13 @@ function App() {
     <div className='page-container'>
       {/* <div className="plane"> */}
         <Canvas gl={{ antialias: true }}>
-          <PerspectiveCamera makeDefault fov={20} position={[0, 0, 10]} />
+          <PerspectiveCamera makeDefault fov={20} position={[0, 0, 20]} />
           <ambientLight intensity={1} />
           <directionalLight position={[0, 0, 10]} intensity={10} />
           {/* <PlaneComponent /> */}
           <CenterGroup />
           
-          <OrbitControls enableDamping enableZoom={false} />
+          <OrbitControls enableDamping enableZoom={false} target={[0, 0, 0]} />
         </Canvas>
       {/* </div> */}
       

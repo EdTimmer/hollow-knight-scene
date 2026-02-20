@@ -1,6 +1,6 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
+  /* max-width: 1280px; */
+  /* margin: 0 auto; */
   /* padding: 2rem; */
   text-align: center;
 }
@@ -13,9 +13,4 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.plane {
-  width: 900px;
-  height: 900px;
 }
