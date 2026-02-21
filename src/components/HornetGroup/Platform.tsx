@@ -26,7 +26,7 @@ const Platform = forwardRef<THREE.Group, Props>(
     useImperativeHandle(ref, () => groupRef.current!);
 
     const { animations, scene } = useGLTF(
-      "/models/platform2.glb"
+      "/models/platform9.glb"
     );
 
     const { actions } = useAnimations(animations, parentGroupRef);
