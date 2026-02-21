@@ -10,7 +10,7 @@ const CenterGroup = () => {
 
   useFrame((_state, delta) => {
     if (bellBeastGroupRef.current) {
-      bellBeastGroupRef.current.rotation.x += delta * 0.06; // Adjust 0.1 to change rotation speed
+      bellBeastGroupRef.current.rotation.x += delta * 0.07; // Adjust 0.1 to change rotation speed
     }
     if (centerGroupRef.current) {
       centerGroupRef.current.rotation.x += delta * 0.03;
