@@ -1,7 +1,7 @@
 import './App.css'
 import { Canvas } from '@react-three/fiber';
 import { Environment, OrbitControls, PerspectiveCamera } from '@react-three/drei';
-import CenterGroup from './components/PlaneComponent/CenterGroup';
+import CenterGroup from './components/CenterGroup';
 
 function App() {
   return (
