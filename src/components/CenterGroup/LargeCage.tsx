@@ -25,7 +25,7 @@ const LargeCage = forwardRef<THREE.Group, Props>(
     useImperativeHandle(ref, () => groupRef.current!);
 
     const { animations, scene } = useGLTF(
-      "/models/island2.glb"
+      "/models/island13.glb"
     );
 
     const { actions } = useAnimations(animations, parentGroupRef);
@@ -44,24 +44,7 @@ const LargeCage = forwardRef<THREE.Group, Props>(
         );
       }
     }, [rotation]);
-
-    // animate around Y
-    // useFrame(() => {
-    //   if (groupRef.current) {
-    //       groupRef.current.rotation.y -= rotationSpeed;
-
-    //   }
-    // });
-
-    // animate parentGroupRef to wobble outwardly from the center of the pentagon
-    // useFrame(() => {
-    //   if (parentGroupRef.current && groupRef.current) {
-    //     // use the child's Y rotation (which is changing) to drive the wobble
-    //     parentGroupRef.current.rotation.z = 
-    //       Math.sin(groupRef.current.rotation.y) * 0.2;
-    //   }
-    // });
-
+    
     return (
       <group ref={parentGroupRef} position={position}>
         <primitive

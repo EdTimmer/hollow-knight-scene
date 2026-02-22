@@ -1,6 +1,5 @@
 import { forwardRef, useRef, useEffect, useImperativeHandle } from "react";
 import { useGLTF, useAnimations } from "@react-three/drei";
-import { useFrame } from "@react-three/fiber";
 import * as THREE from "three";
 
 interface Props {
@@ -45,23 +44,6 @@ const BellBeast = forwardRef<THREE.Group, Props>(
         );
       }
     }, [rotation]);
-
-    // animate around Y
-    // useFrame(() => {
-    //   if (groupRef.current) {
-    //       groupRef.current.rotation.y -= rotationSpeed;
-
-    //   }
-    // });
-
-    // animate parentGroupRef to wobble outwardly from the center of the pentagon
-    // useFrame(() => {
-    //   if (parentGroupRef.current && groupRef.current) {
-    //     // use the child's Y rotation (which is changing) to drive the wobble
-    //     parentGroupRef.current.rotation.z = 
-    //       Math.sin(groupRef.current.rotation.y) * 0.2;
-    //   }
-    // });
 
     return (
       <group ref={parentGroupRef} position={position}>
