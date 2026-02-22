@@ -2,7 +2,7 @@ import { useRef } from "react";
 import { useFrame } from "@react-three/fiber";
 import * as THREE from "three";
 import BellBeast from "./BellBeast";
-import BigIsland from "./BigIsland";
+import LargeCage from "./LargeCage";
 
 const CenterGroup = () => {
   const centerGroupRef = useRef<THREE.Group>(null);
@@ -23,7 +23,7 @@ const CenterGroup = () => {
       <group ref={bellBeastGroupRef}>
         <BellBeast position={[0, 1.24, 0]} rotation={[0, 0, 0]} scale={0.13} />
       </group>
-      <BigIsland position={[0, 0, 0]} rotation={[0, 0, 0]} scale={0.1} rotationSpeed={0.01} />  
+      <LargeCage position={[0, 0, 0]} rotation={[0, 0, 0]} scale={1.25} rotationSpeed={0.01} />  
     </group>)
 } 
 

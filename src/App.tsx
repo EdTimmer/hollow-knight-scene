@@ -4,16 +4,21 @@ import { Canvas } from '@react-three/fiber';
 import { Environment, OrbitControls, PerspectiveCamera, Loader } from '@react-three/drei';
 import CenterGroup from './components/CenterGroup';
 import HornetGroup from './components/HornetGroup';
+import TwoCagesGroup from './components/TwoCagesGroup';
 
 function App() {
   return (
     <div className='page-container'>
-        <Canvas gl={{ antialias: true }}>
+        <Canvas gl={{ antialias: true, logarithmicDepthBuffer: true }}>
           <Suspense fallback={null}>
-            <PerspectiveCamera makeDefault fov={20} position={[0, 0, 10]} />
+            <PerspectiveCamera makeDefault fov={20} position={[0, 0, 7]} />
             <ambientLight intensity={0.5} />
             <directionalLight position={[-10, -10, 10]} intensity={1} />
             <directionalLight position={[10, -10, 10]} intensity={1} />
+
+            <TwoCagesGroup scale={1} position={[-2.2, 0, 0]} rotation={[0, 0, 0]} rotationSpeed={0.01} />
+            <TwoCagesGroup scale={1} position={[2.2, 0, 0]} rotation={[0, 0, 0]} rotationSpeed={0.01} />
+
             <CenterGroup />
             <HornetGroup />   
             <OrbitControls enableDamping enableZoom={false} target={[0, 0, 0]} />
