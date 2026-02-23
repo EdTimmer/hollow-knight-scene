@@ -25,7 +25,7 @@ const LargeCage = forwardRef<THREE.Group, Props>(
     useImperativeHandle(ref, () => groupRef.current!);
 
     const { animations, scene } = useGLTF(
-      "/models/island13.glb"
+      "/models/cage1.glb"
     );
 
     const { actions } = useAnimations(animations, parentGroupRef);

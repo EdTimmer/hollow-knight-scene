@@ -16,8 +16,8 @@ function App() {
             <directionalLight position={[-10, -10, 10]} intensity={1} />
             <directionalLight position={[10, -10, 10]} intensity={1} />
 
-            <TwoCagesGroup scale={1} position={[-2.2, 0, 0]} rotation={[0, 0, 0]} rotationSpeed={0.01} />
-            <TwoCagesGroup scale={1} position={[2.2, 0, 0]} rotation={[0, 0, 0]} rotationSpeed={0.01} />
+            {/* <TwoCagesGroup scale={0.8} position={[-2.2, 0, 0]} rotation={[0, 0, 0]} rotationSpeed={0.01} />
+            <TwoCagesGroup scale={1} position={[2.2, 0, 0]} rotation={[0, 0, 0]} rotationSpeed={0.01} /> */}
 
             <CenterGroup />
             <HornetGroup />   

@@ -9,6 +9,7 @@ interface Props {
   position?: [number, number, number];
   rotation?: [number, number, number];
   rotationSpeed?: number;
+  variant?: "gold" | "blue";
 }
 
 const SmallCage = forwardRef<THREE.Group, Props>(
@@ -18,6 +19,7 @@ const SmallCage = forwardRef<THREE.Group, Props>(
       position = [0, 0, 0],
       rotation = [0, 0, 0],
       rotationSpeed = 0.01,
+      variant = "gold",
     },
     ref
   ) => {
@@ -28,7 +30,7 @@ const SmallCage = forwardRef<THREE.Group, Props>(
     useImperativeHandle(ref, () => groupRef.current!);
 
     const { animations, scene } = useGLTF(
-      "/models/small_island1.glb"
+      variant === "gold" ? "/models/small_island1.glb" : "/models/cage_small_blue1.glb"
     );
     const clone = useMemo(() => SkeletonUtils.clone(scene), [scene]);
 
