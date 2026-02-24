@@ -9,7 +9,7 @@ import TwoCagesGroup from './components/TwoCagesGroup';
 function App() {
   return (
     <div className='page-container'>
-        <Canvas gl={{ antialias: true, logarithmicDepthBuffer: true }}>
+        <Canvas gl={{ antialias: true, logarithmicDepthBuffer: true, toneMappingExposure: 1 }}>
           <Suspense fallback={null}>
             <PerspectiveCamera makeDefault fov={20} position={[0, 0, 7]} />
             <ambientLight intensity={0.5} />
