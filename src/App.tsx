@@ -26,6 +26,10 @@ function App() {
           </Suspense>
         </Canvas>      
         <Loader />
+        
+        <div className="link-container">
+          <a href="https://www.edtimmer.com/" target="_blank" aria-label="Link to portfolio" title="Link to portfolio">edtimmer.com</a>
+        </div>
     </div>
   )
 }
