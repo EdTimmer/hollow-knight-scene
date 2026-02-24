@@ -1,5 +1,6 @@
 import { forwardRef, useRef, useEffect, useImperativeHandle } from "react";
 import { useGLTF, useAnimations } from "@react-three/drei";
+import { useFrame } from "@react-three/fiber";
 import * as THREE from "three";
 
 interface Props {
@@ -25,7 +26,7 @@ const Hornet = forwardRef<THREE.Group, Props>(
     useImperativeHandle(ref, () => groupRef.current!);
 
     const { animations, scene } = useGLTF(
-      "/models/hornet3.glb"
+      "/models/hornet5.glb"
     );
 
     const { actions } = useAnimations(animations, parentGroupRef);
@@ -44,6 +45,15 @@ const Hornet = forwardRef<THREE.Group, Props>(
         );
       }
     }, [rotation]);
+
+    const time = useRef(0);
+
+    useFrame((_, delta) => {
+      time.current += delta;
+      if (groupRef.current) {
+        groupRef.current.position.y = Math.sin(time.current * 0.6) * 0.0315;
+      }
+    });
 
     return (
       <group ref={parentGroupRef} position={position}>
