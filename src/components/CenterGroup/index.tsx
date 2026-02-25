@@ -3,7 +3,6 @@ import { useFrame } from "@react-three/fiber";
 import * as THREE from "three";
 import BellBeast from "./BellBeast";
 import LargeCage from "./LargeCage";
-import SmallCage from "../TwoCagesGroup/SmallCage";
 import Ball from "../TwoCagesGroup/Ball";
 
 const CenterGroup = () => {

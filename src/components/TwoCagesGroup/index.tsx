@@ -1,7 +1,5 @@
 import { useRef } from "react";
-import { useFrame } from "@react-three/fiber";
 import * as THREE from "three";
-import SmallCage from "./SmallCage";
 import ComboCageGroup from "../ComboCageGroup";
 
 interface Props {
@@ -21,12 +19,6 @@ const TwoCagesGroup = (
 ) => {
   const outerGroupRef = useRef<THREE.Group>(null);
   const platformGroupRef = useRef<THREE.Group>(null);
-
-  // useFrame((_state, delta) => {
-  //   if (outerGroupRef.current) {
-  //     outerGroupRef.current.rotation.x += delta * 0.1;
-  //   }
-  // });
 
   return (
     <group ref={outerGroupRef} position={position} rotation={rotation} scale={scale}>

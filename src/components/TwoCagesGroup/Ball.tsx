@@ -1,5 +1,4 @@
 import { forwardRef, useRef, useEffect, useImperativeHandle, useMemo } from "react";
-import { useFrame } from "@react-three/fiber";
 import { useGLTF, useAnimations } from "@react-three/drei";
 import * as THREE from "three";
 import { SkeletonUtils } from "three-stdlib";
@@ -18,7 +17,6 @@ const Ball = forwardRef<THREE.Group, Props>(
       scale = 1,
       position = [0, 0, 0],
       rotation = [0, 0, 0],
-      rotationSpeed = 0.01,
     },
     ref
   ) => {
@@ -49,14 +47,6 @@ const Ball = forwardRef<THREE.Group, Props>(
         );
       }
     }, [rotation]);
-
-    // useFrame((_state, delta) => {
-    //   if (groupRef.current) {
-    //     groupRef.current.rotation.x += rotationSpeed * delta * 4;
-    //     groupRef.current.rotation.y += rotationSpeed * delta * 4;
-    //     groupRef.current.rotation.z += rotationSpeed * delta * 4;
-    //   }
-    // });
 
     return (
       <group ref={parentGroupRef} position={position}>

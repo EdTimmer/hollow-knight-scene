@@ -4,7 +4,6 @@ import { Canvas } from '@react-three/fiber';
 import { Environment, OrbitControls, PerspectiveCamera, Loader } from '@react-three/drei';
 import CenterGroup from './components/CenterGroup';
 import HornetGroup from './components/HornetGroup';
-import TwoCagesGroup from './components/TwoCagesGroup';
 
 function App() {
   return (
