@@ -25,7 +25,7 @@ const BellBeast = forwardRef<THREE.Group, Props>(
     useImperativeHandle(ref, () => groupRef.current!);
 
     const { animations, scene } = useGLTF(
-      "/models/bell_beast22.glb"
+      "/models/bell_beast23.glb"
     );
 
     const { actions } = useAnimations(animations, scene);
