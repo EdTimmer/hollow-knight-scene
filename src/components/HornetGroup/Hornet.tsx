@@ -26,7 +26,7 @@ const Hornet = forwardRef<THREE.Group, Props>(
     useImperativeHandle(ref, () => groupRef.current!);
 
     const { animations, scene } = useGLTF(
-      "/models/hornet27.glb"
+      "/models/hornet30.glb"
     );
 
     const { actions } = useAnimations(animations, parentGroupRef);
